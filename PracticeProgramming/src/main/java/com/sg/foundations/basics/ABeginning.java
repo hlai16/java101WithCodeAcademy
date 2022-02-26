@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ABeginning;
+package com.sg.foundations.basics;
 
 /**
  *
  * @author glori
  */
-public class java {
-    public static void main(String[] args) {
+public class ABeginning {
+     public static void main(String[] args) {
         System.out.println("Hello World!");
         System.out.println("Hello from the Guild!");
         System.out.println("Typing code is easier than I thought ...");
