@@ -18,7 +18,7 @@ public class QuestForUserInput {
         String yourQuest;
         double velocityOfSwallow;
         
-        System.out.printIn("What is your name??");
+        System.out.println("What is your name??");
         yourName = inputReader.nextLine();
         
         System.out.println("What is your quest?!");
