@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class LovesMe {
     public static void main(String[] args) {
         
-        int petals = 4;
+        int petals = 17;
         boolean pickPetal = false;
         
         System.out.println("Well here goes nothing...");
