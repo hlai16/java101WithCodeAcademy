@@ -15,7 +15,7 @@ public class InterestCalculator {
         Scanner userInput = new Scanner(System.in);
         double initialAmt;
         int years = 0;
-        int time = 0;
+        int time = 1;
         double interest;
         
         System.out.println("How much do you want to invest? ");
@@ -30,17 +30,22 @@ public class InterestCalculator {
         System.out.println("Calculating... \n");
         
         double totalEarnings = initialAmt * (1 + (interest / 4 / 100));
-        double interestEarned = totalEarnings - initialAmt;
         
-        while (time < years) {
+        
+        while (time <= years) {
             System.out.println("Year " + time + ": ");
+            
+            double interestEarned = totalEarnings - initialAmt;
+            
+            initialAmt = initialAmt + interestEarned;
+            totalEarnings = totalEarnings + interestEarned;
+            interestEarned++;
+            
             System.out.println("Began with $" + initialAmt);
             System.out.println("Earned $" + interestEarned);
             System.out.println("Ended with $" + totalEarnings);
             
-            initialAmt = initialAmt + interestEarned;
-            totalEarnings = totalEarnings + interestEarned;
-            interestEarned = (totalEarnings / initialAmt - 1) *400;
+            
             time++;
         }
         
