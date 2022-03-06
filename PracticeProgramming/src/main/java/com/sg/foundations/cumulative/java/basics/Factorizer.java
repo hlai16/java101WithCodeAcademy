@@ -29,17 +29,17 @@ public class Factorizer {
             }
             
         }
-        System.out.println(num + " has " + factors + " factors.");
+        System.out.println("\n" + num + " has " + factors + " factors.");
         
-        if (sumFactors % num == 0) {
+        if (sumFactors / 2 == num) {
             System.out.println(num + " is a perfect number.");
         } else {
             System.out.println(num + " is not a perfect number.");
         }
-        if (factors > 2 || factors < 2) {
+        if (factors != 2) {
             System.out.println(num + " is not a prime number.");
         } else {
-            System.out.println(num + "is a prime number.");
+            System.out.println(num + " is a prime number.");
         }
     }
 }
