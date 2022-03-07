@@ -29,7 +29,8 @@ public class InterestCalculator {
         
         System.out.println("Calculating... \n");
         
-        double totalEarnings = initialAmt * (1 + (interest / 4 / 100));
+        double quarterInterest = interest / 4;
+        double totalEarnings = initialAmt * (1 + (quarterInterest/ 100));
         
         
         while (time <= years) {
@@ -39,13 +40,13 @@ public class InterestCalculator {
             
             initialAmt = initialAmt + interestEarned;
             totalEarnings = totalEarnings + interestEarned;
-            interestEarned++;
+         
             
             System.out.println("Began with $" + initialAmt);
             System.out.println("Earned $" + interestEarned);
             System.out.println("Ended with $" + totalEarnings);
             
-            
+            quarterInterest = (totalEarnings / initialAmt - 1) * 100;
             time++;
         }
         
