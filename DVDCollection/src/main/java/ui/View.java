@@ -12,7 +12,11 @@ import java.util.List;
  * @author glori
  */
 public class View {
-    private UserIO io = new UserIOConsoleImpl();
+    private UserIO io;
+    
+    public View(UserIO io) {
+        this.io = io;
+    }
     
     public int printMenuAndGetSelection() {
         io.print("Main Menu");
@@ -115,14 +119,17 @@ public class View {
     public void successfullyUpdatedBanner() {
         io.readString("DVD successfully updated. Please hit enter to continue");
     }
-//    public void displayUpdatingResult(DVD updatedDVD) {
-//        if (updatedDVD != null) {
-//            getNewDVDInfo();
-//            
-//        } else {
-//            io.print("No such DVD.");
-//        }
-//        io.readString("Please hit enter to continue");
-//        
-//    }
+    public void displayExitBanner() {
+        io.print("Good Bye!!!");
+    }
+
+    public void displayUnknownCommandBanner() {
+        io.print("Unknown Command!!!");
+    }
+    
+    //catch error message
+    public void displayErrorMessage(String errorMsg) {
+        io.print("=== ERROR ===");
+        io.print(errorMsg);
+    }
 }

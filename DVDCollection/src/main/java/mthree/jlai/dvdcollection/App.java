@@ -5,6 +5,11 @@
 package mthree.jlai.dvdcollection;
 
 import controller.Controller;
+import dao.Dao;
+import dao.DaoFileImpl;
+import ui.UserIO;
+import ui.UserIOConsoleImpl;
+import ui.View;
 
 /**
  *
@@ -12,7 +17,10 @@ import controller.Controller;
  */
 public class App {
     public static void main(String[] args) {
-        Controller controller = new Controller();
+        UserIO myIo = new UserIOConsoleImpl();
+        View myView = new View(myIo);
+        Dao myDao = new DaoFileImpl();
+        Controller controller = new Controller(myDao, myView);
         controller.run();
     }
 }

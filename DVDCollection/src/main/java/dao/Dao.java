@@ -12,13 +12,13 @@ import java.util.List;
  * @author glori
  */
 public interface Dao {
-    DVD addDVD(String title, DVD dvd);
+    DVD addDVD(String title, DVD dvd) throws DaoException;
     
-    List<DVD> getAllDVDs();
+    List<DVD> getAllDVDs() throws DaoException;
     
-    DVD getDVD(String title);
+    DVD getDVD(String title) throws DaoException;
     
-    DVD removeDVD(String title);
+    DVD removeDVD(String title) throws DaoException;
     
 //    DVD editDVD(String title, DVD dvd);
 }
